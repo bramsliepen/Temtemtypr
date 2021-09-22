@@ -1,0 +1,28 @@
+body {
+    display: grid;
+}
+
+#type1list{
+    grid-column: 1;
+    grid-row: 1;
+}
+#type1{
+    grid-column: 1;
+    grid-row: 2;
+}
+#type2list{
+    grid-column: 1;
+    grid-row: 3;
+}
+#type2{
+    grid-column: 1;
+    grid-row: 4;
+}
+#output{
+    grid-column: 3;
+    grid-row: 1 / 4;
+}
+
+ul > li {
+    list-style: none;
+}
