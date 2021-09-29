@@ -335,7 +335,7 @@ divrem.setAttribute("class", "typeContainer");
 divrem.setAttribute("id", 2);
 var img = document.createElement('img');
 var p = document.createElement('p');
-img.src = "./images/remove.png";
+img.src = "./images/typeremove.png";
 p.innerText = 'no type';
 divrem.onclick = function(){
     type2 = '';
@@ -420,33 +420,33 @@ function defense_calculation(type1,type2){
 
 function output(newtype){
     //TODO: Turn into divs instead of lists
-    var quads = document.createElement('ul');
-    var doubles = document.createElement('ul');
-    var singles = document.createElement('ul');
-    var halfs = document.createElement('ul');
-    var fourths = document.createElement('ul');
+    var quads = document.createElement('div');
+    var doubles = document.createElement('div');
+    var singles = document.createElement('div');
+    var halfs = document.createElement('div');
+    var fourths = document.createElement('div');
     let singletypes = types;
 
     for(var i = 0; i < newtype.quad.length; ++i) {
-        var li = document.createElement('li');
+        var li = document.createElement('p');
         li.innerText = newtype.quad[i];
         li.id = newtype.quad[i];
         quads.appendChild(li);
     }
     for(var i = 0; i < newtype.double.length; ++i) {
-        var li = document.createElement('li');
+        var li = document.createElement('p');
         li.innerText = newtype.double[i];
         li.id = newtype.double[i];
         doubles.appendChild(li);
     }
     for(var i = 0; i < newtype.half.length; ++i) {
-        var li = document.createElement('li');
+        var li = document.createElement('p');
         li.innerText = newtype.half[i];
         li.id = newtype.half[i];
         halfs.appendChild(li);
     }
     for(var i = 0; i < newtype.fourth.length; ++i) {
-        var li = document.createElement('li');
+        var li = document.createElement('p');
         li.innerText = newtype.fourth[i];
         li.id = newtype.fourth[i];
         fourths.appendChild(li);
@@ -458,7 +458,7 @@ function output(newtype){
     singletypes = singletypes.filter(element => !newtype.fourth.includes(element));
 
     for(var i = 0; i < singletypes.length; ++i) {
-        var li = document.createElement('li');
+        var li = document.createElement('p');
         li.innerText = types[i];
         li.id = singletypes[i];
         singles.appendChild(li);
@@ -504,9 +504,6 @@ function output(newtype){
 }
 
 defense_calculation(type1,type2);
-
-
-
 
 function makeClickableLi(type, num){
     var div = document.createElement('div');
