@@ -459,7 +459,7 @@ function output(newtype){
 
     for(var i = 0; i < singletypes.length; ++i) {
         var li = document.createElement('p');
-        li.innerText = types[i];
+        li.innerText = singletypes[i];
         li.id = singletypes[i];
         singles.appendChild(li);
     }
